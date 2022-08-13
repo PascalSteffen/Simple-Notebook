@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+
+}
+
+body {
+    box-sizing: border-box;
+    margin: 16px 0;
+
+}
+
+
+/* Headline Design */
+.trashArchivForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 150px;
+
+}
+
+.trashForm,
+.archivForm {
+    width: 5vw !important;
+    margin: 0 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 12px;
+}
+
+.trashForm img,
+.archivForm img {
+    width: 20%;
+}
+
+.trashFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#tableImportant,
+#tableNormal {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#importantTrashTable,
+#trashTable {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.design {
+    position: relative;
+    padding: 0px 8px;
+}
+
+.openTrashArchiv {
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 225ms ease-in-out;
+}
+
+.popUp {
+    width: 50vw;
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+.popUpImg {
+    padding: 16px 0px;
+    width: 40%;
+    cursor: pointer;
+}
+
+.PopUpFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 16px;
+}
+
+.PopUpIconFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dNone {
+    display: none;
+}
+
+/* Body Design */
+.boxContainer {
+    background-color: transparent;
+    padding: 16px 16px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.textContainer {
+    background-color: transparent;
+    width: 16vw !important;
+    margin-top: 16px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#headlineText,
+#middleText {
+    border: unset;
+    outline: none;
+    width: 45vw;
+    padding: 12px;
+}
+
+.picForm {
+    width: 5%;
+    margin-right: 32px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.underDesign {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.add {
+    position: absolute;
+    right: 5% !important;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom: 2px solid transparent;
+    transition: all 225ms ease-in-out;
+    background-color: rgba(255, 186, 0, 0.5);
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.add:hover {
+    background-color: rgba(255, 186, 0, 0.7);
+    transition: all 225ms ease-in-out;
+
+}
+
+span {
+    word-wrap: break-word;
+}
+
+.pinForm {
+    position: absolute;
+    top: 15%;
+    right: 5% !important;
+    cursor: pointer;
+}
+
+.pinForm img {
+    width: 50%;
+}
+
+.important {
+    background-color: transparent;
+    width: 25vw;
+    margin-top: 16px;
+    padding: 8px 8px;
+    border-radius: 5px;
+    box-shadow: rgba(255, 186, 0, 1) 0px 1px 2px 0px, rgba(255, 186, 0, 0.5) 0px 2px 6px 2px;
+
+}
+
+/* ImportantBox/TextBox Design */
+.deleteFlex {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-left: 125px;
+}
+
+.deletePicForm {
+    width: 12%;
+    padding: 0 6px;
+    cursor: pointer;
+}
+
+.underline {
+    border-top: 1px solid black;
+    padding-bottom: 16px;
+}
+
+
+/* @media (min-width: 768px) and (max-height: 1024px) {
+    .trashArchivForm {
+        margin-right: 72px;
+    }
+} */
+
+/** 
+ * 
+ *  Headline Design
+ * 
+ */
+.headlineFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 12px;
+    border-bottom: 1px solid lightgray;
+}
+
+.menuList {
+    width: 15vw;
+    display: flex;
+    align-items: center;
+}
+
+.headlineIcons {
+    width: 1.5vw;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+.notizPic {
+    width: 3vw;
+}
+
+.headlineFont {
+    font-weight: bold;
+    padding: 0 8px;
+    color: rgb(143, 138, 138);
+}
+
+.searchList {
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 5px;
+    background-color: rgba(214, 213, 213, 0.2);
+    padding: 8px 8px;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 33vw;
+}
+
+input::placeholder {
+    font-size: 16px;
+}
+
+.secondMenuList {
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondMenuPic {
+    width: 1.5vw;
+    margin: 0 16px;
+}
+
+.thirdMenuPic {
+    width: 1.5vw;
+    padding: 0 16px;
+    cursor: pointer;
+
+}
+
+.thirdProfilPic {
+    width: 3vw;
+    padding: 0 16px;
+    cursor: pointer;
+
+}
+
+
+
+/** 
+ * 
+ *  Body Design
+ * 
+ */
+.bodyFlex {
+    display: flex;
+    justify-content: left;
+    padding: 16px 0;
+    padding-right: 12px;
+
+}
+
+.leftBodyListFlex {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.leftBodyListPadding {
+    padding-bottom: 16px;
+}
+
+.LeftBoxContainer {
+    background-color: transparent;
+    transition: all 225ms ease-in-out;
+    width: 52vw;
+    padding: 16px 32px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.LeftBoxContainer:hover {
+    background-color: rgba(255, 186, 0, 0.7);
+    transition: all 225ms ease-in-out;
+}
+
+#counter {
+    position: absolute;
+    top: 10.0%;
+    right: 0;
+    left: 7.9%;
+    text-align: center;
+    font-size: 12px;
+    background-color: rgba(214, 213, 213, 0.7);
+    width: 1vw;
+    padding: 2px;
+    border-radius: 5px;
+
+}
+
+.generateBodyFlex {
+    display: flex;
+    justify-content: center;
+}
+
+.leftgenerateListFlex {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    width: 20vw;
+    border-bottom: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+}
+
+.tableFlex {
+    width: 60vw;
+}
+
+
+
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .bodyFlex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 12px;
+    }
+
+    .headlineFlex {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        padding: 4px 12px;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .secondMenuList {
+        position: absolute;
+        right: 20%;
+    }
+
+    .menuList {
+        width: 94vw;
+        padding-bottom: 16px;
+    }
+
+    .searchList {
+        width: 90vw;
+    }
+
+    .thirdProfilPic,
+    .notizPic {
+        width: 7vw;
+    }
+
+    .secondMenuPic,
+    .thirdMenuPic,
+    .headlineIcons {
+        width: 3.5vw;
+    }
+
+    .pinForm {
+        top: 24%;
+        right: 9%;
+    }
+
+    .add {
+        right: 9%;
+    }
+
+    .picForm {
+        margin-left: 0 !important;
+    }
+
+    #headlineText,
+    #middleText {
+        width: 60vw;
+    }
+
+    .LeftBoxContainer {
+        width: 25vw !important;
+    }
+
+    .textContainer {
+        width: 75vw !important;
+    }
+
+    .tableFlex {
+        margin: 0;
+        width: 0;
+    }
+
+    .deletePicForm {
+        width: 10%
+    }
+
+    .popUp {
+        width: 100%;
+    }
+
+    #counter {
+        left: 66.5%;
+        top: 12.5%;
+        width: 5vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .menuList {
+        width: 18vw;
+    }
+
+    .searchList {
+        width: 50vw;
+    }
+
+    .secondMenuList {
+        width: 22vw;
+    }
+
+    .leftBodyListFlex {
+        width: 20.5vw;
+    }
+
+    .pinForm {
+        top: 13%;
+        right: 27%;
+    }
+
+    #counter {
+        left: 9%;
+        top: 9%;
+        width: 2vw;
+    }
+
+    .tableFlex {
+        margin-right: 55px;
+    }
+
+    .add {
+        right: 27%;
+    }
+
+    .deletePicForm {
+        width: 20% !important;
+    }
+
+}
+
+@media (min-width: 1281px) {
+
+    .leftBodyListFlex {
+        width: 22.5vw;
+    }
+
+    .tableFlex {
+        margin-right: 10px;
+    }
+
+
+}
+
+
+@media (min-width: 1024px) and (max-width: 1024px) {
+    #counter {
+        left: 10%;
+        top: 11%;
+        width: 2vw;
+    }
+
+    .pinForm {
+        top: 16%;
+        right: 25%;
+    }
+
+    .add {
+        right: 25%;
+    }
+
+    .tableFlex {
+        margin-right: 35px;
+    }
+
+    .deletePicForm {
+        width: 35% !important;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 280px) {
+    .thirdProfilPic {
+        display: none;
+    }
+
+    #counter {
+        left: 70.5%;
+        top: 16%;
+        width: 5vw;
+    }
+
+    .pinForm {
+        top: 30%;
+        right: 0%;
+    }
+
+    .picForm {
+        width: 5%;
+        margin-left: 16px !important;
+        margin-right: 0px;
+        cursor: pointer;
+    }
+
+    .deletePicForm {
+        width: 20%;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 540px) {
+    #counter {
+        left: 65%;
+        top: 16.5%;
+        width: 5vw;
+    }
+
+    .pinForm {
+        top: 31%;
+        right: 16%;
+    }
+
+    .add {
+        right: 18%;
+    }
+
+    .deletePicForm {
+        width: 8%;
+    }
+}
+
+@media (min-width: 912px) and (max-width: 912px) {
+    #counter {
+        left: 11%;
+        top: 5%;
+        width: 2vw;
+    }
+
+    .pinForm {
+        top: 8%;
+        right: 24%;
+    }
+
+    .add {
+        right: 25%;
+    }
+
+    .tableFlex {
+        margin-right: 28px;
+    }
+
+    .textContainer {
+        width: 25vw !important;
+    }
+
+    .popUp {
+        width: 60vw;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 768px) {
+    #counter {
+        left: 12%;
+        top: 7%;
+        width: 2vw;
+    }
+
+    .pinForm {
+        top: 10%;
+        right: 21%;
+    }
+
+    .add {
+        right: 24%;
+    }
+
+    .textContainer {
+        width: 25vw !important;
+    }
+
+    .tableFlex {
+        margin-right: 18px;
+    }
+
+    .popUp {
+        width: 62vw;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+}
+
+@media (min-width: 820px) and (max-width: 820px) {
+    #counter {
+        left: 12%;
+        top: 6%;
+        width: 2vw;
+    }
+
+    .pinForm {
+        top: 10%;
+        right: 21%;
+    }
+
+    .add {
+        right: 24%;
+    }
+
+    .textContainer {
+        width: 25vw !important;
+    }
+
+    .tableFlex {
+        margin-right: 18px;
+    }
+
+    .popUp {
+        width: 62vw;
+        background-color: white;
+        border-radius: 5px;
+    }
+}
+
+
+@media (min-width: 360px) and (max-width: 360px) {
+    .pinForm {
+        top: 28%;
+        right: 5%;
+    }
+
+    #counter {
+        left: 67.5%;
+        top: 14.5%;
+        width: 5vw;
+    }
+
+}
+
+@media (min-width: 390px) and (max-width: 393px) {
+    .pinForm {
+        top: 25%;
+        right: 9%;
+    }
+
+    #counter {
+        left: 66.5%;
+        top: 13.5%;
+        width: 5vw;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 375px) {
+    .pinForm {
+        top: 32%;
+        right: 9%;
+    }
+
+    #counter {
+        left: 66.5%;
+        top: 16.5%;
+        width: 5vw;
+    }
+}
